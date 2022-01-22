@@ -1,2 +1,2 @@
 # react-native-practice
-Practicing React Native best practices, using React Native CLI
+Practicing React Native, using React Native CLI
