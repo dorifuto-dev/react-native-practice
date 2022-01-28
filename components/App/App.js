@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import {Text, View} from 'react-native';
 import VoteContainer from '../VoteContainer/VoteContainer';
 
@@ -20,7 +20,7 @@ const App = () => {
       },
       {
         songName: "Never Gonna Give You Up",
-        artist: "Rick Astley",
+        artist: "Rick Assley",
         numVotes: 0,
         voteId: "20211023"
       },
@@ -39,23 +39,12 @@ const App = () => {
     ]
   )
 
-  // Every time voteData is updated, perform this effect:
-  // evaluate all percentages.
-
-  // useEffect(() => {
-
-  // }, [voteData])
-
   const incrementVote = (voteId) => {
     const found = voteData.find((vote) => voteId == vote.voteId)
     const foundIndex = voteData.indexOf(found)
     found.numVotes++ 
     voteData.splice(foundIndex, 1, found)
     setVoteData([...voteData])
-  }
-
-  const evaluatePercentages = () => {
-
   }
 
   return (
@@ -66,6 +55,13 @@ const App = () => {
         justifyContent: "center",
         alignItems: "center"
       }}>
+      <Text
+        style={{
+          fontSize: 30
+        }}
+      >
+        Q App
+      </Text>
       <VoteContainer 
         votes={voteData}
         incrementVote={incrementVote}
