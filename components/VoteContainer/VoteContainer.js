@@ -10,10 +10,10 @@ const VoteContainer = ({ votes, incrementVote }) => {
     return acc
   }, 0)
 
-  const voteCards = votes.map((vote, index) => {
+  const voteCards = votes.map((vote) => {
     return (
       <VoteCard 
-        key={index}
+        key={vote.voteId}
         songInfo={vote}
         incrementVote={incrementVote}
         totalVotes={totalVotes}
